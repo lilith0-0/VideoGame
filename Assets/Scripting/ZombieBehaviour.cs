@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem; 
 
-public class HoldRepair : MonoBehaviour
-{ 
-    public bool isHold = false;
+public class ZombieBehaviour : MonoBehaviour
+{
+    public float speed = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,8 +12,6 @@ public class HoldRepair : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        isHold = Input.GetMouseButton(0);
-        
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 }
